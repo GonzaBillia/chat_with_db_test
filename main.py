@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ————— Configuración de entorno —————
-DATABASE_URL = "mysql+pymysql://root:ZMBbrwQJBLBiPbQXhFriWPqgPmCGYzYp@yamabiko.proxy.rlwy.net:11355/railway"
+DATABASE_URL = os.getenv("DATABASE_URL")
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not DATABASE_URL or not GOOGLE_API_KEY:
     raise RuntimeError("Define las variables de entorno DATABASE_URL y GOOGLE_API_KEY")
